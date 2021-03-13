@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h2> Lista Pessoas</h2>
+
+{% for pessoa in pessoas %}
+    <li>{{pessoa.nome}}</li>
+{% endfor %}
+
+<form action="{% url 'core_pessoa_novo' %}" method="POST">
+    {% csrf_token %} <!--  evitar ataque crsf -->
+
+    {{ form.as_p }}
+
+    <button type="submit">Cadastrar</button>
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h2> Lista Mov Rotativos</h2>
+checkin -- checkout
+{% for rotativo in rotativos %}
+    <li>{{rotativo.checkin}} -- {{rotativo.checkin}} : {{rotativo.veiculo.placa}}</li>
+{% endfor %}
+
+</body>
+</html>
